@@ -17,6 +17,73 @@ using namespace std;
 //Test and commit this to version control.
 /////////////////////////////////////////////////////////////////////////////////////////
 
+//Binary Search
+//
+//USE THE SAME BUBBLE SORT PROJECT(#7) FOR THIS TASK ONCE THE SORT IS WORKING
+//You will implement a function that searches a sorted array for a given value.Pass the target value and the array to your function and return the index where the value was found if it exists in the array.If it is not in the array return -1.
+//You must implement binary search for this exercise.Do NOT implement linear search.Do NOT use any built - in library functions.
+//Call your function from int main() after the bubble sort asserts() using the sorted array.
+//Add the following asserts() to your main function to check your binary search works.
+//(Your sorted array should look like this 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 43, 53, 61, 67, 71, 83, 89, 97)
+//11 = 4
+//23 = 8
+//97 = 19
+//88 = -1
+//Enure all asserts() pass when you build and run.
+//Commit this to version control.
+//Write a loop that asks the user for a value and then calls your function to search for that value in the sorted array.
+//If your function finds the value, tell the user at which index it found it, otherwise tell them the value was not in the array.
+//Test and commit this to version control.
+//		
+
+
+// a function to call binary search with the variables provided 
+int binary_search(int array[], int array_size, int user_number)
+{
+	//the lowest index int the array
+	int low_point = 0;
+	// highest index in the array
+	int high_point = (array_size - 1);
+	
+	// rough middle of the array
+	int mid_point = 0;
+
+
+
+	// while its less than the high point 
+	while (low_point <= high_point)
+	{
+
+		mid_point = (low_point + high_point) / 2;
+
+		if (user_number == array[mid_point])
+		{
+			return mid_point;
+
+		}
+		else if (user_number > array[mid_point])
+		{
+			low_point = mid_point + 1;
+
+		}
+		else if (user_number < array[mid_point])
+		{
+
+			high_point = mid_point - 1;
+
+		}
+
+	}
+	return -1;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -120,7 +187,48 @@ int main()
 	}
 	cout << endl;
 
+	string user_input = " ";
+	int user_number = 0;
 
+
+
+
+
+
+
+	while (user_input != "exit")
+	{
+
+		cout << "give me a number to find in the array " << endl;
+		cin >> user_number;
+
+
+
+
+		int result = binary_search(bubble_array, 20, user_number);
+
+		if (result >= 0)
+		{
+			cout << result << endl;
+			cout << "the number " << user_number << " is in the array at index value " << result << endl;
+
+
+		}
+		else
+		{
+			cout << result << endl;
+			cout << user_number << " the number isnt in the array" << endl;
+		}
+
+
+
+
+
+		cout << "want to go again " << endl;
+		cin >> user_input;
+
+
+	}
 
 
 
