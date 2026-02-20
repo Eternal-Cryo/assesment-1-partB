@@ -53,27 +53,33 @@ int binary_search(int array[], int array_size, int user_number)
 	// while its less than the high point 
 	while (low_point <= high_point)
 	{
-
+		// the mid point moves with the changing of the variables and since its an int it automaticly rounds 
 		mid_point = (low_point + high_point) / 2;
 
+
+		//if the number is in the array is the one being searched for
 		if (user_number == array[mid_point])
-		{
+		{// return the index
 			return mid_point;
 
 		}
+		// if the search number is less than the number at the mid point
 		else if (user_number > array[mid_point])
 		{
 			low_point = mid_point + 1;
 
 		}
+		// if the search number is more than the number at the mid point
 		else if (user_number < array[mid_point])
 		{
 
 			high_point = mid_point - 1;
 
 		}
-
+		// after each set it halves the search area
 	}
+
+	//if it runs out of numbers to look through
 	return -1;
 }
 
@@ -185,9 +191,16 @@ int main()
 			cout << bubble_array[i] << " ";
 
 	}
-	cout << endl;
+	cout << endl << endl;
 
+
+
+	/////////
+
+	// grabbing the char for the loop
 	string user_input = " ";
+
+	//grabbing the number being looked for
 	int user_number = 0;
 
 
@@ -195,25 +208,28 @@ int main()
 
 
 
-
+	//loop for giving multiple numbers 
 	while (user_input != "exit")
 	{
-
+		//the code to grab the number
 		cout << "give me a number to find in the array " << endl;
 		cin >> user_number;
 
 
 
-
+		//calling apon the function using the infomation from the player and the infomation that we have 
 		int result = binary_search(bubble_array, 20, user_number);
 
+
+		//checking to see if its in the array because index cant go below 0
 		if (result >= 0)
-		{
+		{	//result being the index 
 			cout << result << endl;
 			cout << "the number " << user_number << " is in the array at index value " << result << endl;
 
 
 		}
+		//if it returns -1 then it plays this message
 		else
 		{
 			cout << result << endl;
@@ -223,7 +239,7 @@ int main()
 
 
 
-
+		// to repeate the loop
 		cout << "want to go again " << endl;
 		cin >> user_input;
 
@@ -236,8 +252,8 @@ int main()
 
 
 
-
-
+	cout << "----------- thanks for playing -----------" << endl;
+	cout << "--------------end of code------------" << endl;
 
 }
 
