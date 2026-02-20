@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="7%29bubblesort8%29binaerySearch.cpp">
+    <ClCompile Include="6)linearSearch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

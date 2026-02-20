@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1d92b72c-42bd-48eb-aa34-642d8314613a}</ProjectGuid>
-    <RootNamespace>assesmetPartB</RootNamespace>
+    <ProjectGuid>{f25d6cbc-9cd8-415a-aa7a-eeef60af5cb0}</ProjectGuid>
+    <RootNamespace>My6linearSearch</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>7)bubblesort8)binaerySearch</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -124,7 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="7%29bubblesort8%29binaerySearch.cpp" />
+    <ClCompile Include="6)linearSearch.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
