@@ -24,33 +24,33 @@ int main()
     string exit = "";
     int number01 = 0;
     int number02 = 0;
-    int tempnumber = 0;
+    int tempNumber = 0;
 
 
-    int *pnumber01 = &number01;
-    int *pnumber02 = &number02;
-    int *ptempnumber = &tempnumber;
+    int *pNumber01 = &number01;
+    int *pNumber02 = &number02;
+    int *pTempNumber = &tempNumber;
 
 
 
     
     cout << "pick a number and ill swap them using pointers " << endl;
     cin >> number01;
-    cout << *pnumber01 << endl;
+    cout << *pNumber01 << endl;
 
     cout << "now pick another number and ill swap them using pointers " << endl;
     cin >> number02;
-    cout << *pnumber02 << endl;
+    cout << *pNumber02 << endl;
 
-    *ptempnumber = *pnumber01;
-    *pnumber01 = *pnumber02;
-    *pnumber02 = *ptempnumber;
+    *pTempNumber = *pNumber01;
+    *pNumber01 = *pNumber02;
+    *pNumber02 = *pTempNumber;
 
 
 
-    cout << " the first number is now " << *pnumber01 << endl;
+    cout << " the first number is now " << *pNumber01 << endl;
 
-    cout << " the second number is now " << *pnumber02 << endl;
+    cout << " the second number is now " << *pNumber02 << endl;
 
 
 
