@@ -251,9 +251,23 @@ int main()
 
 
 
-
+	// end of code 
 	cout << "----------- thanks for playing -----------" << endl;
 	cout << "--------------end of code------------" << endl;
 
 }
 
+//bubble sort
+// https://www.w3schools.com/dsa/dsa_algo_bubblesort.php
+//https://www.geeksforgeeks.org/dsa/bubble-sort-algorithm/
+//https://www.youtube.com/watch?v=62Ai0p1xUpE
+
+//binarey search 
+//https://www.geeksforgeeks.org/dsa/binary-search/ 
+//https://www.youtube.com/watch?v=vohuRrwbTT4
+
+
+
+
+
+//aswell as the infomation provided by aie
