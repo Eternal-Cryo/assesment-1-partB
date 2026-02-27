@@ -104,3 +104,8 @@ int main()
 	cout << "thanks for playing!" << endl;
 	cout << "---------- end of code ----------" << endl;
 }
+
+
+//infomation on linear search 
+//https://www.geeksforgeeks.org/dsa/linear-search/
+//https://www.youtube.com/watch?v=FYX_yG-9CxE&t=551s 
