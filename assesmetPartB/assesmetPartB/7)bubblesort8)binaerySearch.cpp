@@ -132,6 +132,10 @@ int binary_search(int array[], int array_size, int user_number)
 		//if the number is in the array is the one being searched for
 		if (user_number == array[mid_point])
 		{// return the index
+
+
+			cout << mid_point << endl;
+			cout << "the number " << user_number << " is in the array at index value " << mid_point << endl;
 			return mid_point;
 
 		}
@@ -152,10 +156,15 @@ int binary_search(int array[], int array_size, int user_number)
 	}
 
 	//if it runs out of numbers to look through
+
+
+
+	cout << "-1" << endl;
+	cout << user_number << " the number isnt in the array"  << endl;
 	return -1;
 
 
-
+	
 
 
 
@@ -223,10 +232,18 @@ int main()
 	//grabbing the number being looked for
 	int user_number = 0;
 	
-	int result = binary_search(bubble_array, 20, 11 );
-	 result = binary_search(bubble_array, 20, 23 );
-	 result = binary_search(bubble_array, 20, 97 );
-	 result = binary_search(bubble_array, 20, 88);
+
+
+	   binary_search(bubble_array, 20, 11);
+	   binary_search(bubble_array, 20, 23);
+	  binary_search(bubble_array, 20, 97);
+	   binary_search(bubble_array, 20, 88);
+
+	 
+	 
+
+
+
 
 	//loop for giving multiple numbers 
 	while (user_input != "exit")
@@ -238,26 +255,9 @@ int main()
 
 
 		//calling apon the function using the infomation from the player and the infomation that we have 
-		int result = binary_search(bubble_array, 20, user_number);
+		 binary_search(bubble_array, 20, user_number);
 
-
-		//checking to see if its in the array because index cant go below 0
-		if (result >= 0)
-		{	//result being the index 
-			cout << result << endl;
-			cout << "the number " << user_number << " is in the array at index value " << result << endl;
-
-
-		}
-		//if it returns -1 then it plays this message
-		else
-		{
-			cout << result << endl;
-			cout << user_number << " the number isnt in the array" << endl;
-		}
-
-
-
+		 
 
 		// to repeate the loop
 		cout << "want to go again " << endl;
