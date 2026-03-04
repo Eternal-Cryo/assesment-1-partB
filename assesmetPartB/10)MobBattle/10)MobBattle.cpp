@@ -2,19 +2,75 @@
 //
 
 #include <iostream>
+#include <string>
+using namespace std;
+
+
+//Make a struct that represents a Mob, it should have an attack skill, a damage rating, a name and health.Write a function that determines the outcome of a battle by passing two Mobs by reference.
+//In the battle function make each Mob perform an attack on the other by using their attack skills to determine the outcome somehow.How is up to you, but some form of simulated dice roll using randomness is suggested(think tabletop RPGs).
+//Based on the attack outcome, apply any damage according to the damage value and adjust the health of the target Mob.
+//Output a relevant string to the console using the Mob’s names e.g.“The Orc hit the Unicorn for 24 damage!”
+//Commit this to version control.
+//
+//Add an int main().Initialize two separate Mob variables.Give them different stats and names.
+//Make a loop to continuously call the battle function on the mobs until one or both have their health reduced below zero.
+//Track the current ‘round’ and display it on the console before displaying the result of that round.
+//Once the battle is over, (A or B run out of health), determine the outcome of the battle(either A won, B won, or both are dead and it’s a draw) and display the result to the console, and exit the loop and program.
+//Test and commit this to version control.
+
+
+
+
+
+//structs
+struct fighters {
+
+	int id;
+	string name;
+	int damage;
+	int health;
+
+// randomn
+// place holders
+//bear
+//badger
+// hawk
+//
+//
+//
+
+
+
+
+
+
+};
+
+void battlescript()
+{
+	
+
+
+
+}
+
+
+
+
+//battle script/ victory script  
+
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	srand((unsigned)time(NULL));
+
+
+
+
+
+
+
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
