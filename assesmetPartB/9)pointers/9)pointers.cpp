@@ -19,29 +19,18 @@ using namespace std;
 //
 //
 
-int main()
+void swap(int number01, int number02) 
 {
-    string exit = "";
-    int number01 = 0;
-    int number02 = 0;
-    int tempNumber = 0;
+     int tempNumber = 0;
 
 
     int *pNumber01 = &number01;
     int *pNumber02 = &number02;
     int *pTempNumber = &tempNumber;
-
-
-
+   
+   cout << *pNumber01 << endl;
+   cout << *pNumber02 << endl;
     
-    cout << "pick a number and ill swap them using pointers " << endl;
-    cin >> number01;
-    cout << *pNumber01 << endl;
-
-    cout << "now pick another number and ill swap them using pointers " << endl;
-    cin >> number02;
-    cout << *pNumber02 << endl;
-
     *pTempNumber = *pNumber01;
     *pNumber01 = *pNumber02;
     *pNumber02 = *pTempNumber;
@@ -52,6 +41,38 @@ int main()
 
     cout << " the second number is now " << *pNumber02 << endl;
 
+
+}
+
+
+
+
+
+
+int main()
+{
+    string exit = "";
+   
+     int number01 = 0;
+    int number02 = 0;
+   
+    
+    while (exit != "exit")
+    {
+
+        cout << "pick a number and ill swap them using pointers " << endl;
+        cin >> number01;
+
+
+        cout << "now pick another number and ill swap them using pointers " << endl;
+        cin >> number02;
+
+
+        swap(number01, number02);
+
+        cout << "want to go again" << endl;
+        cin >> exit;
+    }
 
 
     cout << "----------- end of code --------------" << endl;
