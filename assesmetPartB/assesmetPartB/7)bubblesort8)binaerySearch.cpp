@@ -36,6 +36,78 @@ using namespace std;
 //Test and commit this to version control.
 //		
 
+int bubbleSort(int array[], int arrayLength)
+{
+	int i = 0;
+	//automaticly set to true
+	bool swapped;
+	// where the loop starts 
+	do
+	{
+		//stays  at false if the array is sorted breaking the loop
+		swapped = false;
+
+		// runs for the length of the array -1 since index starts at 0
+		//                                  the -i is to shorten the looping because each set of the loop 
+		//                                    means the next biggest number reached the correct spot so it doesnt need to check that spot 
+		for (int s = 0; s < arrayLength - 1 - i; s++)
+		{
+			//cout << i << endl;
+
+
+			//if the number on the right is larger than the left 
+			if (array[s] > array[s + 1])
+			{
+
+
+				// setting the temp as bubble array s
+				int temp_num = array[s];
+				//setting array s as array s +1
+				array[s] = array[s + 1];
+				//then setting s + 1 as the temps number which was array s original number
+				array[s + 1] = temp_num;
+				//to keep the loop going due to a number being swapped
+				swapped = true;
+
+
+			}
+
+
+			////uncomenting this reads out the loop and shows every change made even iff nothing happened  
+			/*for (int j = 0; j < array_length; j++)
+			{
+				cout << bubble_array[j] << " ";
+
+			}
+			cout << endl;*/
+
+			//decreases the amount of loops that it goes through by 1 each time
+		} i++;
+
+
+
+
+
+		// uncomenting this one will read out the overall changes in each itteration 
+		/*for (int i = 0; i < array_length; i++)
+		{
+			cout << bubble_array[i] << " ";
+
+		}
+		cout << endl;*/
+
+
+
+		// to repeat the loop if something was swapped
+	} while (swapped);
+
+	return 0;
+}
+
+
+
+
+
 
 // a function to call binary search with the variables provided 
 int binary_search(int array[], int array_size, int user_number)
@@ -81,6 +153,13 @@ int binary_search(int array[], int array_size, int user_number)
 
 	//if it runs out of numbers to look through
 	return -1;
+
+
+
+
+
+
+
 }
 
 
@@ -104,10 +183,9 @@ int main()
 	//controlling the iterations of the loop
 	int i = 0;
 	//to repeat the loop and reduce the amount of times it runs 
-	//automaticly set to true
-	bool swapped;
+	
 
-
+	
 
 	// reading out the original array before it is sorted
 	cout << "pre sorted array " << endl;
@@ -118,72 +196,9 @@ int main()
 	}
 	cout << endl;
 
+	bubbleSort(bubble_array, 20);
 
-
-
-	// where the loop starts 
-	do
-	{
-		//stays  at false if the array is sorted breaking the loop
-		swapped = false;
-
-		// runs for the length of the array -1 since index starts at 0
-		//                                  the -i is to shorten the looping because each set of the loop 
-		//                                    means the next biggest number reached the correct spot so it doesnt need to check that spot 
-		for (int s = 0; s < array_length - 1 - i; s++)
-		{
-			//cout << i << endl;
-
-
-			//if the number on the right is larger than the left 
-			if (bubble_array[s] > bubble_array[s + 1])
-			{
-
-
-				// setting the temp as bubble array s
-				int temp_num = bubble_array[s];
-				//setting array s as array s +1
-				bubble_array[s] = bubble_array[s + 1];
-				//then setting s + 1 as the temps number which was array s original number
-				bubble_array[s + 1] = temp_num;
-				//to keep the loop going due to a number being swapped
-				swapped = true;
-
-
-			}
-
-
-			////uncomenting this reads out the loop and shows every change made even iff nothing happened  
-			/*for (int j = 0; j < array_length; j++)
-			{
-				cout << bubble_array[j] << " ";
-
-			}
-			cout << endl;*/
-
-			//decreases the amount of loops that it goes through by 1 each time
-		} i++;
-
-
-
-
-
-		// uncomenting this one will read out the overall changes in each itteration 
-		/*for (int i = 0; i < array_length; i++)
-		{
-			cout << bubble_array[i] << " ";
-
-		}
-		cout << endl;*/
-
-
-
-		// to repeat the loop if something was swapped
-	} while (swapped);
-
-
-
-	// reading out the last changed array
+// reading out the last changed array
 	cout << " sorted array " << endl;
 
 	for (int i = 0; i < array_length; i++)
@@ -195,6 +210,11 @@ int main()
 
 
 
+
+	
+
+
+
 	/////////
 
 	// grabbing the char for the loop
@@ -202,11 +222,11 @@ int main()
 
 	//grabbing the number being looked for
 	int user_number = 0;
-
-
-
-
-
+	
+	int result = binary_search(bubble_array, 20, 11 );
+	 result = binary_search(bubble_array, 20, 23 );
+	 result = binary_search(bubble_array, 20, 97 );
+	 result = binary_search(bubble_array, 20, 88);
 
 	//loop for giving multiple numbers 
 	while (user_input != "exit")
