@@ -68,8 +68,8 @@ int main()
 
 
 		//asking and grabbing the number from the player: note it doesn't like letters or punctuation
-		cout << "please enter a number to search the array" << endl;
-		cin >> user_number;
+		std::cout << "please enter a number to search the array" << endl;
+		std::cin >> user_number;
 
 
 
@@ -80,29 +80,29 @@ int main()
 		int result = search(search_array, 20, user_number);
 
 		// reading out the index value or a -1 if not in the array
-		cout << result << endl;
+		std::cout << result << endl;
 
 		// checking if its in the array 
 		if (result >= 0) {
 			// if it is then say the number                                 then the index it was found at
 			//        \/													\/
-			cout << user_number << " number was found at index number " << result << endl;
+			std::cout << user_number << " number was found at index number " << result << endl;
 		}
 		else
 		{	//if its a negative print that it couldnt be found
-			cout << user_number << " could not be found" << endl;
+			std::cout << user_number << " could not be found" << endl;
 
 		}
 
 
 		//doesnt care what is typed unless it is exit
-		cout << "go again or exit" << endl;
-		cin >> exit;
+		std::cout << "go again or exit" << endl;
+		std::cin >> exit;
 	}
 
 	//end of code stuff
-	cout << "thanks for playing!" << endl;
-	cout << "---------- end of code ----------" << endl;
+	std::cout << "thanks for playing!" << endl;
+	std::cout << "---------- end of code ----------" << endl;
 }
 
 
