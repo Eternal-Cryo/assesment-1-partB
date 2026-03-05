@@ -37,10 +37,14 @@ void swap(int number01, int number02)
 
 
 
-    cout << " the first number is now " << *pNumber01 << endl;
+    std::cout << " the first number is now " << *pNumber01 << endl;
 
-    cout << " the second number is now " << *pNumber02 << endl;
+    std::cout << " the second number is now " << *pNumber02 << endl;
 
+    // derefrencing the pointers
+    pNumber01 = nullptr;
+    pNumber02 = nullptr;
+    pTempNumber = nullptr;
 
 }
 
@@ -60,21 +64,21 @@ int main()
     while (exit != "exit")
     {
 
-        cout << "pick a number and ill swap them using pointers " << endl;
-        cin >> number01;
+        std::cout << "pick a number and ill swap them using pointers " << endl;
+        std::cin >> number01;
 
 
-        cout << "now pick another number and ill swap them using pointers " << endl;
-        cin >> number02;
+        std::cout << "now pick another number and ill swap them using pointers " << endl;
+        std::cin >> number02;
 
 
         swap(number01, number02);
 
-        cout << "want to go again" << endl;
-        cin >> exit;
+        std::cout << "want to go again" << endl;
+        std::cin >> exit;
     }
+     
 
-
-    cout << "----------- end of code --------------" << endl;
+    std::cout << "----------- end of code --------------" << endl;
 }
 
