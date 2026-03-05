@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <string>
+#include <cassert>
 using namespace std;
 
 //Bubble Sort
@@ -36,7 +37,7 @@ using namespace std;
 //Test and commit this to version control.
 //		
 
-int bubbleSort(int array[], int arrayLength)
+void bubbleSort(int array[], int arrayLength)
 {
 	int i = 0;
 	//automaticly set to true
@@ -101,10 +102,21 @@ int bubbleSort(int array[], int arrayLength)
 		// to repeat the loop if something was swapped
 	} while (swapped);
 
-	return 0;
+	return;
 }
 
+bool assertCheck(int array[], int arraylength)
+{
+	for (int i = 1 ; i < arraylength; i++)
+	{	
+		int a = array[i];
+		int b = array[i - 1];
+		assert(a > b);
+	}
 
+
+	return true;
+}
 
 
 
@@ -134,8 +146,8 @@ int binary_search(int array[], int array_size, int user_number)
 		{// return the index
 
 
-			cout << mid_point << endl;
-			cout << "the number " << user_number << " is in the array at index value " << mid_point << endl;
+			std::cout << mid_point << endl;
+			std::cout << "the number " << user_number << " is in the array at index value " << mid_point << endl;
 			return mid_point;
 
 		}
@@ -159,8 +171,8 @@ int binary_search(int array[], int array_size, int user_number)
 
 
 
-	cout << "-1" << endl;
-	cout << user_number << " the number isnt in the array"  << endl;
+	std::cout << "-1" << endl;
+	std::cout << user_number << " the number isnt in the array"  << endl;
 	return -1;
 
 
@@ -197,28 +209,30 @@ int main()
 	
 
 	// reading out the original array before it is sorted
-	cout << "pre sorted array " << endl;
+	std::cout << "pre sorted array " << endl;
 	for (int i = 0; i < array_length; i++)
 	{
-		cout << bubble_array[i] << " ";
+		std::cout << bubble_array[i] << " ";
+		
 
 	}
-	cout << endl;
+	std::cout << endl;
 
 	bubbleSort(bubble_array, 20);
 
 // reading out the last changed array
-	cout << " sorted array " << endl;
+	std::cout << " sorted array " << endl;
 
 	for (int i = 0; i < array_length; i++)
 	{
-			cout << bubble_array[i] << " ";
+		std::cout << bubble_array[i] << " ";
 
 	}
-	cout << endl << endl;
-
-
-
+	std::cout << endl << endl;
+	
+	bool confirmed = 0;
+	confirmed = assertCheck(bubble_array, 20);
+	assert(confirmed == true);
 
 	
 
@@ -234,10 +248,10 @@ int main()
 	
 
 
-	   binary_search(bubble_array, 20, 11);
-	   binary_search(bubble_array, 20, 23);
-	  binary_search(bubble_array, 20, 97);
-	   binary_search(bubble_array, 20, 88);
+	assert(binary_search(bubble_array, 20, 11) == 4);
+	assert(binary_search(bubble_array, 20, 23) == 8);
+	assert(binary_search(bubble_array, 20, 97) == 19);
+	assert(binary_search(bubble_array, 20, 88) == -1);
 
 	 
 	 
@@ -249,7 +263,7 @@ int main()
 	while (user_input != "exit")
 	{
 		//the code to grab the number
-		cout << "give me a number to find in the array " << endl;
+		std::cout << "give me a number to find in the array " << endl;
 		cin >> user_number;
 
 
@@ -260,7 +274,7 @@ int main()
 		 
 
 		// to repeate the loop
-		cout << "want to go again " << endl;
+		 std::cout << "want to go again " << endl;
 		cin >> user_input;
 
 
@@ -272,8 +286,8 @@ int main()
 
 
 	// end of code 
-	cout << "----------- thanks for playing -----------" << endl;
-	cout << "--------------end of code------------" << endl;
+	std::cout << "----------- thanks for playing -----------" << endl;
+	std::cout << "--------------end of code------------" << endl;
 
 }
 
