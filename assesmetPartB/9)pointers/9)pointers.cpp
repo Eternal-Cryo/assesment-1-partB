@@ -85,7 +85,7 @@ int main()
 
 
      //a  while script for random numbers 
-    /*while (exit != "exit")
+    while (exit != "exit")
     {
 
         std::cout << "pick a number and ill swap them using pointers " << endl;
@@ -100,7 +100,7 @@ int main()
 
         std::cout << "want to go again" << endl;
         std::cin >> exit;
-    }*/
+    }
      
 
     std::cout << "----------- end of code --------------" << endl;
