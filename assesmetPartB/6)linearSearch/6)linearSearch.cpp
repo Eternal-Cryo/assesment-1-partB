@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cassert>
 using namespace std;
 
 
@@ -58,15 +59,16 @@ int main()
 	//the array we are searching through 
 	int search_array[] = { 67, 13, 3, 89, 43, 2, 19, 71, 5, 61, 97, 7, 37, 31, 17, 11, 83, 53, 23, 29 };
 
+	int result = 0;
+
+	 assert(search(search_array, 20, 3) == 2);
+	 assert(search(search_array, 20, 7) == 11);
+	 assert(search(search_array, 20, 67) == 0);
+	 assert(search(search_array, 20, 88) ==-1);
 
 	//simple while loop to continue the search or to exit the program
 	while (exit != "exit")
 	{
-
-
-
-
-
 		//asking and grabbing the number from the player: note it doesn't like letters or punctuation
 		std::cout << "please enter a number to search the array" << endl;
 		std::cin >> user_number;
@@ -77,7 +79,7 @@ int main()
 		//finding the index//  imputting the variable for the search
 		//   |						\/	then the user value
 		//  \/                                   \/
-		int result = search(search_array, 20, user_number);
+		 result = search(search_array, 20, user_number);
 
 		// reading out the index value or a -1 if not in the array
 		std::cout << result << endl;
